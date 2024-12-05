@@ -1,17 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </>
+    <div className='sidebar'>
+      <div className="sidebar-header">
+          <button className='toggle-button'>
+            <div className={`arrow ${isOpen ? 'left' : 'right'}`}></div>
+          </button>
+        <div className="header-logo">
+          logo
+        </div>
+      </div>
+    </div>
   )
 }
 
