@@ -1,19 +1,9 @@
-import { useState } from 'react'
+import SidebarNavbar from "./Component/sidebar_navigation"
+
 
 function App() {
-  const [isOpen, setIsOpen] = useState(true);
-
   return (
-    <div className='sidebar'>
-      <div className="sidebar-header">
-          <button className='toggle-button'>
-            <div className={`arrow ${isOpen ? 'left' : 'right'}`}></div>
-          </button>
-        <div className="header-logo">
-          logo
-        </div>
-      </div>
-    </div>
+    <SidebarNavbar />
   )
 }
 
