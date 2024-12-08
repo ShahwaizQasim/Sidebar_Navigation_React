@@ -8,14 +8,14 @@ import Contact from "./Pages/Contact"
 function App() {
   return (
     <BrowserRouter>
-      {/* <SidebarNavbar /> */}
-      <Routes>
-        <Route path="/" element={<SidebarNavbar />}>
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        </Route>
-      </Routes>
+      <SidebarNavbar />
+      <div style={{ marginLeft: '350px' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }
