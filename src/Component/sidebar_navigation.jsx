@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { SidebarData } from './sidebarData';
+import { Link } from 'react-router';
 
 function SidebarNavbar() {
     const [isOpen, setIsOpen] = useState(true);
@@ -23,10 +24,10 @@ function SidebarNavbar() {
                     {
                         SidebarData?.map((data, ind) => {
                             return <li key={ind}>
-                                <a href={data.path}>
-                                    <span>{data.icon}</span>
-                                    <span>{isOpen? data.title: ''}</span>
-                                </a>
+                                <Link to={data.to} className='nav-link'>
+                                    <span className='nav-link1'>{data.icon}</span>
+                                    <span className='nav-link2'>{isOpen ? data.title : ''}</span>
+                                </Link>
                             </li>
                         })
                     }
