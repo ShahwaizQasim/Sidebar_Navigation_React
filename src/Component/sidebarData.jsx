@@ -6,7 +6,7 @@ export const SidebarData = [
     {
         title: 'Home',
         icon: <HomeIcon />,
-        to: '/'
+        to: '/home'
     },
     {
         title: 'About',
